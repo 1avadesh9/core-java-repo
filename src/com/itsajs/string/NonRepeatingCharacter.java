@@ -1,13 +1,9 @@
 package com.itsajs.string;
-
-<<<<<<< HEAD
-=======
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
->>>>>>> 9566ee98e9fe27e724e62e9f57264b4c00710efa
 public class NonRepeatingCharacter
 {
   public static void main(String[] args) 
