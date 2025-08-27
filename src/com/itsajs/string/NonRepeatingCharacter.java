@@ -12,9 +12,6 @@ public class NonRepeatingCharacter
 {
   public static void main(String[] args) 
   {
-<<<<<<< HEAD
-	
-=======
 	 String name = "Avadesh Jaiswar";
 	 LinkedHashMap<Character, Long> linkedHashMap = name.chars().mapToObj(ch -> (char)ch)
 	 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
@@ -24,6 +21,5 @@ public class NonRepeatingCharacter
 	 
 	 System.out.println("NonRepeatingCharacter : "+nonRepeatingCharacter);
   
->>>>>>> 9566ee98e9fe27e724e62e9f57264b4c00710efa
   }
 }
