@@ -9,13 +9,20 @@ public class NonRepeatingCharacter
   public static void main(String[] args) 
   {
 	 String name = "Avadesh Jaiswar";
-	 LinkedHashMap<Character, Long> linkedHashMap = name.chars().mapToObj(ch -> (char)ch)
-	 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
+	 LinkedHashMap<Character, Long> linkedHashMap = name.chars()
+			 .mapToObj(ch -> (char)ch)
+			 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()));
   
-	 char nonRepeatingCharacter = linkedHashMap.entrySet().stream().filter(m->m.getValue() > 1).map(Map.Entry::getKey)
-	 .findFirst().get().charValue();
+	 char nonRepeatingCharacter = linkedHashMap.entrySet()
+			 .stream()
+			 .filter(m->m.getValue() > 1)
+			 .map(Map.Entry::getKey)
+	 		 .findFirst().get().charValue();
 	 
 	 System.out.println("NonRepeatingCharacter : "+nonRepeatingCharacter);
-  
+
+	  Employee employee = new Employee("ReBIT3076", "Avadesh Jaiswar");
+	  System.out.println(employee.employeeId()+" "+employee.employeeName());
+
   }
 }
